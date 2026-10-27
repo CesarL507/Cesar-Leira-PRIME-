@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Training | PRIME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="" class="brand-icon">
+      <span>PRIME</span>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <span class="pill-tag">🔥 PERSONAL TRAINING</span>
+        <h1 class="hero-title">BUILD YOUR<br><span class="accent">BEST BODY</span></h1>
+        <p class="hero-text">Customize your workouts, track your progress, and train smarter. Edit routines to match your goals, schedule, and budget.</p>
+
+        <div class="hero-actions">
+          <a href="#routines" class="btn btn-solid">💪 View Routines</a>
+          <a href="#customize" class="btn btn-ghost">🎯 Customize Plan</a>
+        </div>
+
+        <ul class="hero-stats">
+          <li><strong>6+</strong><span>BASE ROUTINES</span></li>
+          <li><strong>100%</strong><span>EDITABLE</span></li>
+          <li><strong>24/7</strong><span>YOUR PACE</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== QUICK START ===================== -->
+    <section class="quick" id="quick">
+      <div class="narrow">
+        <div class="center">
+          <span class="pill-tag">🔥 QUICK START</span>
+          <h2 class="h2 on-dark">CHOOSE YOUR <span class="accent">BASE ROUTINE</span></h2>
+          <p class="sub">Explore ready-to-go routines. Click any one to preview it, then add it to your plan with one tap.</p>
+        </div>
+
+        <div class="picker">
+          <div class="picker-list" id="pickerList"></div>
+          <div class="picker-detail" id="pickerDetail"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ROUTINES ===================== -->
+    <section class="routines" id="routines">
+      <div class="narrow">
+        <div class="routines-head">
+          <div>
+            <span class="pill-soft">💪 ROUTINES</span>
+            <h2 class="h2 on-light">Base &amp; Custom <span class="accent">Routines</span></h2>
+            <p class="sub-light">Pick a base routine and edit it to your needs — or create your own from scratch.</p>
+          </div>
+          <button type="button" class="btn-new" id="newRoutineBtn">+ New Routine</button>
+        </div>
+
+        <div class="tabs" id="tabs">
+          <button type="button" class="tab active" data-cat="All">All</button>
+          <button type="button" class="tab" data-cat="Full Body">Full Body</button>
+          <button type="button" class="tab" data-cat="Upper Body">Upper Body</button>
+          <button type="button" class="tab" data-cat="Lower Body">Lower Body</button>
+          <button type="button" class="tab" data-cat="Core">Core</button>
+          <button type="button" class="tab" data-cat="Cardio">Cardio</button>
+          <button type="button" class="tab" data-cat="Custom">Custom</button>
+        </div>
+
+        <div class="routine-grid" id="routineGrid"></div>
+        <p class="empty" id="routineEmpty" hidden>No routines in this category yet. Create one with "+ New Routine".</p>
+      </div>
+    </section>
+
+    <!-- ===================== CUSTOMIZE ===================== -->
+    <section class="customize" id="customize">
+      <div class="narrow-sm">
+        <div class="center">
+          <span class="pill-tag">🎯 PERSONALIZE</span>
+          <h2 class="h2 on-dark title-md">Customize Your <span class="accent">Training</span></h2>
+          <p class="sub">Set your health, budget, and schedule — we'll match your routines accordingly.</p>
+        </div>
+
+        <!-- Health -->
+        <div class="panel">
+          <h3 class="panel-title"><i class="ico ico-heart">💗</i>Health Status</h3>
+          <div class="grid-2" id="healthOpts">
+            <button type="button" class="opt active" data-v="Excellent">Excellent</button>
+            <button type="button" class="opt" data-v="Good">Good</button>
+            <button type="button" class="opt" data-v="Average">Average</button>
+            <button type="button" class="opt" data-v="Needs Attention">Needs Attention</button>
+          </div>
+          <p class="mini-label">Fitness Level</p>
+          <div class="level-row" id="levelOpts">
+            <button type="button" class="lvl" data-v="Sedentary">Sedentary</button>
+            <button type="button" class="lvl active" data-v="Beginner">Beginner</button>
+            <button type="button" class="lvl" data-v="Intermediate">Intermediate</button>
+            <button type="button" class="lvl" data-v="Advanced">Advanced</button>
+            <button type="button" class="lvl" data-v="Athlete">Athlete</button>
+          </div>
+        </div>
+
+        <!-- Budget -->
+        <div class="panel">
+          <h3 class="panel-title"><i class="ico">💰</i>Budget &amp; Economy</h3>
+          <div class="budget-row">
+            <span class="mini-label nm">Monthly Budget</span>
+            <strong class="budget-val" id="budgetVal">$50</strong>
+          </div>
+          <input type="range" id="budgetRange" min="0" max="500" step="10" value="50">
+          <div class="range-scale"><span>$0</span><span>$250</span><span>$500</span></div>
+        </div>
+
+        <!-- Schedule -->
+        <div class="panel">
+          <h3 class="panel-title"><i class="ico">🕐</i>Schedule &amp; Availability</h3>
+          <p class="mini-label">Time of Day</p>
+          <div class="grid-3" id="timeOpts">
+            <button type="button" class="time" data-v="Morning"><span>🌅</span>Morning</button>
+            <button type="button" class="time" data-v="Afternoon"><span>☀️</span>Afternoon</button>
+            <button type="button" class="time" data-v="Evening"><span>🌙</span>Evening</button>
+          </div>
+          <p class="mini-label">Preferred Days</p>
+          <div class="days" id="dayOpts">
+            <button type="button" class="day" data-v="Mon">Mon</button>
+            <button type="button" class="day" data-v="Tue">Tue</button>
+            <button type="button" class="day" data-v="Wed">Wed</button>
+            <button type="button" class="day" data-v="Thu">Thu</button>
+            <button type="button" class="day" data-v="Fri">Fri</button>
+            <button type="button" class="day" data-v="Sat">Sat</button>
+            <button type="button" class="day" data-v="Sun">Sun</button>
+          </div>
+        </div>
+
+        <!-- Goals -->
+        <div class="panel">
+          <h3 class="panel-title"><i class="ico">📄</i>Goals &amp; Notes</h3>
+          <label class="mini-label" for="goals">Your Goals</label>
+          <input type="text" id="goals" class="field" placeholder="e.g. Lose 10 lbs, build muscle, improve endurance">
+          <label class="mini-label" for="notes">Additional Notes</label>
+          <input type="text" id="notes" class="field" placeholder="Any injuries, preferences, or constraints">
+        </div>
+
+        <div class="center">
+          <button type="button" class="btn-save" id="savePlan">💾 Save My Plan</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Aviso (toast) -->
+  <div class="toast" id="toast" hidden></div>
+
+  <!-- ===================== MODAL: NEW / EDIT ROUTINE ===================== -->
+  <div class="overlay" id="routineOverlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <h3 id="modalTitle">NEW ROUTINE</h3>
+        <button type="button" class="modal-x" data-close aria-label="Close">✕</button>
+      </div>
+      <form class="modal-body" id="routineForm">
+        <label for="rName">Routine Name</label>
+        <input type="text" id="rName" placeholder="e.g. Morning Power Workout" required>
+
+        <label for="rDesc">Description</label>
+        <textarea id="rDesc" placeholder="Brief description of the routine..."></textarea>
+
+        <div class="two">
+          <div>
+            <label for="rLevel">Difficulty</label>
+            <select id="rLevel">
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </div>
+          <div>
+            <label for="rCat">Category</label>
+            <select id="rCat">
+              <option>Custom</option>
+              <option>Full Body</option>
+              <option>Upper Body</option>
+              <option>Lower Body</option>
+              <option>Core</option>
+              <option>Cardio</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="rMin">Duration (minutes)</label>
+        <input type="number" id="rMin" min="5" max="180" value="30">
+
+        <div class="ex-head">
+          <label>Exercises</label>
+          <button type="button" class="btn-add" id="addExercise">+ Add</button>
+        </div>
+        <div class="ex-list" id="exList"></div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-create" id="modalSubmit">Create Routine</button>
+          <button type="button" class="btn-cancel" data-close>Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="training.js"></script>
+</body>
+</html>

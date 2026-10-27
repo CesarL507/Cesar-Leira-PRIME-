@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | PRIME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="" class="brand-icon">
+      <span>PRIME</span>
+    </a>
+  </header>
+
+  <main class="signin">
+    <div class="wrap">
+
+      <!-- Título -->
+      <div class="signin-top">
+        <div>
+          <p class="kicker"><span class="dash"></span>ACCOUNT</p>
+          <h1 class="title">SIGN IN</h1>
+        </div>
+      </div>
+
+      <div class="signin-grid">
+
+        <!-- Formulario -->
+        <form class="signin-form" action="#" method="post">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+
+          <label for="password">PASSWORD</label>
+          <div class="password-wrap">
+            <input type="password" id="password" name="password" placeholder="At least 8 characters" minlength="8" required>
+            <span class="eye" aria-hidden="true">👁</span>
+          </div>
+
+          <div class="form-row">
+            <label class="remember"><input type="checkbox" name="remember"> Remember me</label>
+            <a href="#" class="forgot">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-signin">SIGN IN</button>
+
+          <p class="divider"><span>or continue with</span></p>
+
+          <div class="social-row">
+            <button type="button" class="btn-social"><b class="g">G</b> Google</button>
+            <button type="button" class="btn-social"><b class="ap"></b> Apple</button>
+          </div>
+
+          <p class="create">Don't have an account? <a href="#">Create one</a></p>
+        </form>
+
+        <!-- Preguntas frecuentes -->
+        <div class="faq">
+          <details open>
+            <summary>How do I create an account?</summary>
+            <p>Click "Create one" on the left, fill in your name, email and password, then hit "Create account". You're ready to join the community.</p>
+          </details>
+          <details>
+            <summary>Is my data secure?</summary>
+            <p>Yes. Your information is encrypted and never shared with third parties.</p>
+          </details>
+          <details>
+            <summary>Can I sign in with Google or Apple?</summary>
+            <p>Yes. Use the Google or Apple buttons under the form to sign in with one click.</p>
+          </details>
+          <details>
+            <summary>What if I forget my password?</summary>
+            <p>Click "Forgot password?" and we will send you a link to reset it.</p>
+          </details>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

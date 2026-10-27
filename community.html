@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community | PRIME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="community.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="" class="brand-icon">
+      <span>PRIME</span>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <p class="kicker mono"><span class="dash"></span>PRIME COMMUNITY</p>
+        <h1 class="hero-title">
+          FIND YOUR<br>
+          <span class="accent">SPORTS TRIBE</span><i class="square"></i>
+        </h1>
+        <p class="hero-text">Clubs, athletes, teams and contacts in one place. Connect with people who train like you in La Chorrera, Panama Oeste.</p>
+
+        <div class="hero-actions">
+          <a href="#teams" class="btn-orange-pill">EXPLORE CLUBS</a>
+          <a href="#athletes" class="btn-outline-pill">VIEW ATHLETES</a>
+        </div>
+
+        <ul class="hero-stats">
+          <li><strong>+500</strong><span>ACTIVE USERS</span></li>
+          <li><strong>+12</strong><span>TEAMS</span></li>
+          <li><strong>+50</strong><span>ATHLETES</span></li>
+          <li><strong>+20</strong><span>COURTS</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Línea punteada naranja -->
+    <div class="dash-band" aria-hidden="true"></div>
+
+    <!-- ===================== TEAMS ===================== -->
+    <section class="teams" id="teams">
+      <div class="wrap">
+        <p class="kicker mono red"><span class="dash"></span>TEAMS · LA CHORRERA</p>
+        <h2 class="title title-dark">JOIN A TEAM<br>NEAR YOU.</h2>
+        <p class="lead">Courts, pitches and sports spaces across La Chorrera, Panama Oeste.<br>Filter by sport and find your spot.</p>
+
+        <!-- Filtros -->
+        <div class="filters" id="filters">
+          <button type="button" class="filter active" data-filter="all">ALL SPORTS</button>
+          <button type="button" class="filter" data-filter="football">5-A-SIDE FOOTBALL</button>
+          <button type="button" class="filter" data-filter="padel">PADEL</button>
+          <button type="button" class="filter" data-filter="basketball">BASKETBALL</button>
+          <button type="button" class="filter" data-filter="volleyball">VOLLEYBALL</button>
+          <button type="button" class="filter" data-filter="tennis">TENNIS</button>
+          <button type="button" class="filter" data-filter="athletics">ATHLETICS</button>
+        </div>
+
+        <!-- Tarjetas de equipos -->
+        <div class="team-grid" id="teamGrid">
+
+          <!-- Football -->
+          <article class="team-card" data-sport="football">
+            <div class="team-cover">
+              <span class="sport-tag">5-A-SIDE FOOTBALL</span>
+              <span class="rating">★ 4.8</span>
+              <h3>EL COCO</h3>
+            </div>
+            <div class="team-body">
+              <h4>El Coco Court</h4>
+              <p class="loc">El Coco, La Chorrera, Panama Oeste</p>
+              <p class="desc">Artificial turf pitches with professional lighting and locker rooms.</p>
+              <div class="team-meta"><span class="price"><b>$18</b> / hour</span><span class="members">48 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="padel">
+            <div class="team-cover">
+              <span class="sport-tag">PADEL</span>
+              <span class="rating">★ 4.9</span>
+              <h3>LA CHORRERA</h3>
+            </div>
+            <div class="team-body">
+              <h4>La Chorrera Padel Club</h4>
+              <p class="loc">La Chorrera, Panama Oeste</p>
+              <p class="desc">4 padel courts with tempered glass and a climate-controlled lounge.</p>
+              <div class="team-meta"><span class="price"><b>$14</b> / hour</span><span class="members">36 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="basketball">
+            <div class="team-cover">
+              <span class="sport-tag">BASKETBALL</span>
+              <span class="rating">★ 4.6</span>
+              <h3>PUERTO CAIMITO</h3>
+            </div>
+            <div class="team-body">
+              <h4>Puerto Caimito Arena</h4>
+              <p class="loc">Puerto Caimito, La Chorrera, Panama Oeste</p>
+              <p class="desc">Multi-purpose hall with regulation backboards and bleachers for 120 people.</p>
+              <div class="team-meta"><span class="price"><b>$12</b> / hour</span><span class="members">52 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="volleyball">
+            <div class="team-cover">
+              <span class="sport-tag">VOLLEYBALL</span>
+              <span class="rating">★ 4.7</span>
+              <h3>PLAYA LEONA</h3>
+            </div>
+            <div class="team-body">
+              <h4>Playa Leona Sports Hub</h4>
+              <p class="loc">Playa Leona, La Chorrera, Panama Oeste</p>
+              <p class="desc">Volleyball court with regulation flooring and a professional adjustable net.</p>
+              <div class="team-meta"><span class="price"><b>$15</b> / hour</span><span class="members">28 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="football">
+            <div class="team-cover">
+              <span class="sport-tag">5-A-SIDE FOOTBALL</span>
+              <span class="rating">★ 4.7</span>
+              <h3>HURTADO</h3>
+            </div>
+            <div class="team-body">
+              <h4>Hurtado Football Club</h4>
+              <p class="loc">Hurtado, La Chorrera, Panama Oeste</p>
+              <p class="desc">5-a-side football team with an active league and weekly training sessions.</p>
+              <div class="team-meta"><span class="price"><b>$25</b> / month</span><span class="members">38 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="padel">
+            <div class="team-cover">
+              <span class="sport-tag">PADEL</span>
+              <span class="rating">★ 4.8</span>
+              <h3>BARRIO COLÓN</h3>
+            </div>
+            <div class="team-body">
+              <h4>Colón Padel Team</h4>
+              <p class="loc">Barrio Colón, La Chorrera, Panama Oeste</p>
+              <p class="desc">Competitive padel team with monthly inter-club tournaments.</p>
+              <div class="team-meta"><span class="price"><b>$30</b> / month</span><span class="members">22 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="basketball">
+            <div class="team-cover">
+              <span class="sport-tag">BASKETBALL</span>
+              <span class="rating">★ 4.6</span>
+              <h3>GUÁCIMO</h3>
+            </div>
+            <div class="team-body">
+              <h4>Guácimo Ballers</h4>
+              <p class="loc">Guácimo, La Chorrera, Panama Oeste</p>
+              <p class="desc">Youth basketball team with a sports development program.</p>
+              <div class="team-meta"><span class="price"><b>$20</b> / month</span><span class="members">30 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="volleyball">
+            <div class="team-cover">
+              <span class="sport-tag">VOLLEYBALL</span>
+              <span class="rating">★ 4.5</span>
+              <h3>LOS ANDES</h3>
+            </div>
+            <div class="team-body">
+              <h4>Los Andes Volley Squad</h4>
+              <p class="loc">Barrio Los Andes, La Chorrera, Panama Oeste</p>
+              <p class="desc">Mixed volleyball team with friendly matches every weekend.</p>
+              <div class="team-meta"><span class="price"><b>$15</b> / month</span><span class="members">24 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="tennis">
+            <div class="team-cover">
+              <span class="sport-tag">TENNIS</span>
+              <span class="rating">★ 4.8</span>
+              <h3>FARALLÓN</h3>
+            </div>
+            <div class="team-body">
+              <h4>Farallón Tennis Center</h4>
+              <p class="loc">Farallón, La Chorrera, Panama Oeste</p>
+              <p class="desc">6 fast-clay courts with certified coaches available.</p>
+              <div class="team-meta"><span class="price"><b>$20</b> / hour</span><span class="members">41 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="tennis">
+            <div class="team-cover">
+              <span class="sport-tag">TENNIS</span>
+              <span class="rating">★ 4.7</span>
+              <h3>EL TRÉBOL</h3>
+            </div>
+            <div class="team-body">
+              <h4>El Trébol Tennis Academy</h4>
+              <p class="loc">El Trébol, La Chorrera, Panama Oeste</p>
+              <p class="desc">Tennis academy with classes for beginners and advanced players.</p>
+              <div class="team-meta"><span class="price"><b>$35</b> / month</span><span class="members">31 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="athletics">
+            <div class="team-cover">
+              <span class="sport-tag">ATHLETICS</span>
+              <span class="rating">★ 4.5</span>
+              <h3>VACAMONTE</h3>
+            </div>
+            <div class="team-body">
+              <h4>Vacamonte Run Track</h4>
+              <p class="loc">Vacamonte, La Chorrera, Panama Oeste</p>
+              <p class="desc">2.5 km seaside track with integrated calisthenics stations.</p>
+              <div class="team-meta"><span class="price"><b>Free</b></span><span class="members">63 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+          <article class="team-card" data-sport="athletics">
+            <div class="team-cover">
+              <span class="sport-tag">ATHLETICS</span>
+              <span class="rating">★ 4.7</span>
+              <h3>CARDONA</h3>
+            </div>
+            <div class="team-body">
+              <h4>Cardona Runners</h4>
+              <p class="loc">Cardona, La Chorrera, Panama Oeste</p>
+              <p class="desc">Community running group with sunrise group outings.</p>
+              <div class="team-meta"><span class="price"><b>Free</b></span><span class="members">45 members</span></div>
+              <a href="#" class="btn-join" data-join>JOIN TEAM</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LIVE TICKER ===================== -->
+    <div class="ticker" aria-label="Live activity">
+      <div class="ticker-track">
+        <span class="live"><i></i>LIVE NOW</span>
+        <span class="t-item"><b>Mariana Gómez</b> Match at 8PM <em>5-a-side</em></span>
+        <span class="t-item"><b>Diego Fábrega</b> Available now <em>Football</em></span>
+        <span class="t-item"><b>Camila Ureña</b> Session ends 12PM <em>Padel</em></span>
+        <span class="t-item"><b>Ricardo Solis</b> Morning run · 5 slots left <em>Athletics</em></span>
+        <span class="t-item"><b>Luis Torres</b> Open court tonight <em>Basketball</em></span>
+        <!-- Repetido para que el desplazamiento sea continuo -->
+        <span class="live"><i></i>LIVE NOW</span>
+        <span class="t-item"><b>Mariana Gómez</b> Match at 8PM <em>5-a-side</em></span>
+        <span class="t-item"><b>Diego Fábrega</b> Available now <em>Football</em></span>
+        <span class="t-item"><b>Camila Ureña</b> Session ends 12PM <em>Padel</em></span>
+        <span class="t-item"><b>Ricardo Solis</b> Morning run · 5 slots left <em>Athletics</em></span>
+        <span class="t-item"><b>Luis Torres</b> Open court tonight <em>Basketball</em></span>
+      </div>
+    </div>
+
+    <!-- ===================== ATHLETES ===================== -->
+    <section class="athletes" id="athletes">
+      <div class="wrap">
+        <p class="kicker-plain">Athletes</p>
+        <h2 class="title title-light">MEET THE PEOPLE<br>WHO LIVE THE<span class="accent">GAME.</span></h2>
+        <p class="lead lead-light">Verified players and coaches with real stats. Connect, learn and level up with the best in Panama.</p>
+
+        <div class="athlete-grid">
+
+          <article class="athlete-card featured">
+            <div class="athlete-top">
+              <span class="level">ADVANCED</span>
+              <div class="avatar">DF</div>
+              <span class="pill">★ 4.9 · FOOTBALL</span>
+            </div>
+            <div class="athlete-body">
+              <h3>Diego Fábrega</h3>
+              <p>8 years coaching youth teams. Specialist in individual technique.</p>
+              <ul class="stats3">
+                <li><strong>124</strong><span>MATCHES</span></li>
+                <li><strong>38</strong><span>GOALS</span></li>
+                <li><strong>5</strong><span>TROPHIES</span></li>
+              </ul>
+              <a href="#" class="btn-profile" data-athlete="df">VIEW PROFILE</a>
+            </div>
+          </article>
+
+          <article class="athlete-card">
+            <div class="athlete-top">
+              <span class="level">PROFESSIONAL</span>
+              <div class="avatar">CU</div>
+              <span class="pill">★ 5 · PADEL</span>
+            </div>
+            <div class="athlete-body">
+              <h3>Camila Ureña</h3>
+              <p>Former professional padel player. Personalized lessons for all levels.</p>
+              <ul class="stats3">
+                <li><strong>98</strong><span>MATCHES</span></li>
+                <li><strong>72</strong><span>WINS</span></li>
+                <li><strong>8</strong><span>TROPHIES</span></li>
+              </ul>
+              <a href="#" class="btn-profile" data-athlete="cu">VIEW PROFILE</a>
+            </div>
+          </article>
+
+          <article class="athlete-card">
+            <div class="athlete-top">
+              <span class="level">COACH</span>
+              <div class="avatar">RS</div>
+              <span class="pill">★ 4.8 · ATHLETICS</span>
+            </div>
+            <div class="athlete-body">
+              <h3>Ricardo Solis</h3>
+              <p>Strength &amp; conditioning coach and running guide. Progressive plans from 5K to 21K.</p>
+              <ul class="stats3">
+                <li><strong>45</strong><span>RACES</span></li>
+                <li><strong>1:32:10</strong><span>PR</span></li>
+                <li><strong>3</strong><span>TROPHIES</span></li>
+              </ul>
+              <a href="#" class="btn-profile" data-athlete="rs">VIEW PROFILE</a>
+            </div>
+          </article>
+
+          <article class="athlete-card">
+            <div class="athlete-top">
+              <span class="level">INTERMEDIATE</span>
+              <div class="avatar">MG</div>
+              <span class="pill">★ 4.7 · 5-A-SIDE FOOTBALL</span>
+            </div>
+            <div class="athlete-body">
+              <h3>Mariana Gómez</h3>
+              <p>Forward for Los Halcones FC. Active player every week in El Coco.</p>
+              <ul class="stats3">
+                <li><strong>42</strong><span>MATCHES</span></li>
+                <li><strong>21</strong><span>GOALS</span></li>
+                <li><strong>2</strong><span>TROPHIES</span></li>
+              </ul>
+              <a href="#" class="btn-profile" data-athlete="mg">VIEW PROFILE</a>
+            </div>
+          </article>
+
+          <article class="athlete-card">
+            <div class="athlete-top">
+              <span class="level">ADVANCED</span>
+              <div class="avatar">LT</div>
+              <span class="pill">★ 4.6 · BASKETBALL</span>
+            </div>
+            <div class="athlete-body">
+              <h3>Luis Torres</h3>
+              <p>Match organizer at Puerto Caimito. Point guard with great court vision.</p>
+              <ul class="stats3">
+                <li><strong>87</strong><span>MATCHES</span></li>
+                <li><strong>412</strong><span>POINTS</span></li>
+                <li><strong>4</strong><span>TROPHIES</span></li>
+              </ul>
+              <a href="#" class="btn-profile" data-athlete="lt">VIEW PROFILE</a>
+            </div>
+          </article>
+
+          <article class="athlete-card">
+            <div class="athlete-top">
+              <span class="level">INTERMEDIATE</span>
+              <div class="avatar">AV</div>
+              <span class="pill">★ 4.8 · PADEL</span>
+            </div>
+            <div class="athlete-body">
+              <h3>Andrea Vega</h3>
+              <p>Padel player in La Chorrera. Climbed 2 levels in 6 months with Prime.</p>
+              <ul class="stats3">
+                <li><strong>56</strong><span>MATCHES</span></li>
+                <li><strong>34</strong><span>WINS</span></li>
+                <li><strong>1</strong><span>TROPHY</span></li>
+              </ul>
+              <a href="#" class="btn-profile" data-athlete="av">VIEW PROFILE</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="kicker mono"><span class="dash"></span>CONTACT</p>
+        <h2 class="title title-light">LET'S TALK?</h2>
+
+        <div class="contact-grid">
+          <form class="contact-form" action="#" method="post">
+            <label for="c-name">NAME</label>
+            <input type="text" id="c-name" name="name" placeholder="Your full name" required>
+
+            <label for="c-email">EMAIL</label>
+            <input type="email" id="c-email" name="email" placeholder="youremail@example.com" required>
+
+            <label for="c-message">MESSAGE</label>
+            <textarea id="c-message" name="message" placeholder="Tell us how we can help"></textarea>
+
+            <button type="submit" class="btn-send">SEND MESSAGE</button>
+
+            <div class="contact-pills">
+              <a href="mailto:hello@prime.app">✉ hello@prime.app</a>
+              <a href="tel:+50760000000">☎ +507 6000-0000</a>
+            </div>
+          </form>
+
+          <div class="faq">
+            <details open>
+              <summary>How do I join a club or team?</summary>
+              <p>Browse the teams section, pick the one you like and hit "Join". The organizer will receive your request.</p>
+            </details>
+            <details>
+              <summary>Are athletes verified?</summary>
+              <p>Yes. Every athlete and coach profile is reviewed and verified by the Prime team.</p>
+            </details>
+            <details>
+              <summary>Can I create my own team?</summary>
+              <p>Yes. Sign in, open your profile and create a group. You can invite players and organize matches.</p>
+            </details>
+            <details>
+              <summary>Is there a cost to join the community?</summary>
+              <p>Joining the community is free. Some teams and coaches charge their own fees, shown on each card.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== MODAL: REGISTRATION ===================== -->
+  <div class="overlay" id="joinOverlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="joinName">
+      <div class="modal-left">
+        <span class="sport-tag" id="joinTag"></span>
+        <h3 id="joinName"></h3>
+        <p class="modal-place" id="joinPlace"></p>
+        <p class="modal-meta"><span id="joinRating"></span><span id="joinMembers"></span></p>
+      </div>
+      <div class="modal-right">
+        <button type="button" class="close" data-close aria-label="Close">×</button>
+        <p class="kicker mono red">REGISTRATION</p>
+        <p class="modal-desc" id="joinDesc"></p>
+        <ul class="feature-chips" id="joinFeatures"></ul>
+
+        <form id="joinForm" action="#" method="post">
+          <label for="j-name">FULL NAME</label>
+          <input type="text" id="j-name" name="name" placeholder="John Doe" required>
+          <label for="j-email">EMAIL</label>
+          <input type="email" id="j-email" name="email" placeholder="john@email.com" required>
+          <label for="j-phone">PHONE</label>
+          <input type="tel" id="j-phone" name="phone" placeholder="+507 6000 0000" required>
+          <button type="submit" class="btn-claim">CLAIM YOUR SPOT</button>
+        </form>
+        <p class="join-done" id="joinDone" hidden>You're in! The organizer will contact you shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== DRAWER: ATHLETE PROFILE ===================== -->
+  <div class="overlay overlay-drawer" id="profileOverlay" hidden>
+    <aside class="drawer" role="dialog" aria-modal="true" aria-label="Athlete profile">
+      <button type="button" class="close close-light" data-close aria-label="Close">×</button>
+      <div class="drawer-scroll" id="drawerContent"></div>
+      <div class="drawer-bar">
+        <form class="quick-msg" id="quickForm">
+          <input type="text" id="quickInput" placeholder="Quick message to Camila...">
+          <button type="submit" aria-label="Send">➤</button>
+        </form>
+        <button type="button" class="btn-secure" id="secureBtn">SECURE SESSION</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="community.js"></script>
+</body>
+</html>

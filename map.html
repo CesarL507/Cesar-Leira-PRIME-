@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map | PRIME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Leaflet (mapa) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- ===================== PANEL IZQUIERDO ===================== -->
+    <aside class="sidebar">
+
+      <!-- Buscador -->
+      <div class="search-row">
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="searchInput" placeholder="Search a sports space..." autocomplete="off">
+        </div>
+        <button type="button" class="clear-btn" id="clearBtn" aria-label="Clear search">×</button>
+      </div>
+
+      <!-- Filtros por categoría -->
+      <div class="chips" id="chips">
+        <button type="button" class="chip" data-cat="football"   style="--c:#16a34a"><i></i>Football</button>
+        <button type="button" class="chip" data-cat="baseball"   style="--c:#dc2626"><i></i>Baseball</button>
+        <button type="button" class="chip" data-cat="multisport" style="--c:#2563eb"><i></i>Multi-sport</button>
+        <button type="button" class="chip" data-cat="futsal"     style="--c:#ea580c"><i></i>Futsal / Indoor</button>
+        <button type="button" class="chip" data-cat="fitness"    style="--c:#7c3aed"><i></i>Fitness / Gym</button>
+        <button type="button" class="chip" data-cat="gymnastics" style="--c:#db2777"><i></i>Gymnastics</button>
+      </div>
+
+      <p class="count" id="count"></p>
+
+      <!-- Lista de espacios (se genera con map.js) -->
+      <div class="space-list" id="spaceList"></div>
+      <p class="empty" id="emptyMsg" hidden>No spaces match your search.</p>
+    </aside>
+
+    <!-- ===================== MAPA ===================== -->
+    <main class="map-wrap">
+      <a href="index.html" class="map-brand">
+        <img src="images/logo.png" alt="" class="brand-icon">
+        <span>PRIME</span>
+      </a>
+      <div id="map"></div>
+      <p class="map-error" id="mapError" hidden>The map could not load. Check your internet connection.</p>
+    </main>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>
